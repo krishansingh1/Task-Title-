@@ -23,9 +23,26 @@ function addTask(e) {
         alert('Add a task');
     }
 
-    const li = document.createElement('');
+   //Create li Element
+    const li= document.createElement('li');
+      
+     li.className= 'collection-item';
 
+     li.appendChild(document.createTextNode(taskInput.value)); 
 
+     const link= document.createElement('a');
+
+     link.className= 'delete-item secondary-content';
+
+     link.innerHTML = '<i class="fa fa-remove"></i>';
+
+     li.appendChild(link);
+
+    // console.log(li);
+
+      taskList.appendChild(li);
+    
+      taskInput.value= '';
 
      e.preventDefault();
 }
