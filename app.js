@@ -42,7 +42,7 @@ function addTask(e) {
 
       taskList.appendChild(li);
     
-      taskInput.value= '';
+      taskInput.value= ''; 
 
      e.preventDefault();
 }
