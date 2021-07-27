@@ -12,17 +12,18 @@ const taskInput= document.querySelector('#task');
 
 //Load all event listeners
 function loadEventListeners() {
-   //Add task event
-    form.addEventListener('submit', addTask);
+
+    //Add task event
+     form.addEventListener('submit', addTask);
 
     //Remove task Event
-     taskList.addEventListener('click',removeTask);
+     taskList.addEventListener('click', removeTask);
 
-     //Clear Task event
-      clearBtn.addEventListener('click', clearTasks);
+    //Clear Task event
+     clearBtn.addEventListener('click', clearTasks);
 
-     //Filter Task Event
-      filter.addEventListener('keyup',filterTasks);
+    //Filter Task Event
+     filter.addEventListener('keyup', filterTasks);
 }
 
 //Add task
@@ -43,7 +44,7 @@ function addTask(e) {
 
      link.className= 'delete-item secondary-content';
 
-     link.innerHTML = '<i class="fa fa-remove"></i>';
+     link.innerHTML = '<i class="fa fa-times"></i>';
 
      li.appendChild(link);
 
@@ -52,7 +53,7 @@ function addTask(e) {
       taskList.appendChild(li);
     
      //Store in Local Storage
-      storeTaskInLocalStorage(taskInput.value);
+       storeTaskInLocalStorage(taskInput.value);
 
      //Clear Input
       taskInput.value= ''; 
@@ -60,7 +61,7 @@ function addTask(e) {
       e.preventDefault();
 }
 
- //Store Task
+  //Store Task
    function storeTaskInLocalStorage(task) {
 
      let tasks;
